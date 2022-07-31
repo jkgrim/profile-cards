@@ -72,6 +72,7 @@ function App() {
         {cards.map((card) => {
           return (
             <ProfileCards
+              key={card.name}
               name={card.name}
               description={card.description}
               footer={card.footer}

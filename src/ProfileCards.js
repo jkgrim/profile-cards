@@ -5,6 +5,13 @@ class ProfileCards extends React.Component {
     super();
   }
 
+  handleClick = (e) => {
+    {
+      e.preventDefault();
+      console.log(this.props.name);
+    }
+  };
+
   render(props) {
     return (
       <div className="card">
@@ -20,7 +27,9 @@ class ProfileCards extends React.Component {
 
             <div className="description">{this.props.description}</div>
           </div>
-          <button className="card-button">Action Btn</button>
+          <button onClick={this.handleClick} className="card-button">
+            Action Btn
+          </button>
         </div>
       </div>
     );
